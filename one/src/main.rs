@@ -7,11 +7,6 @@ fn main() {
     let mut in_string = String::new();
     input.read_to_string(&mut in_string).unwrap();
     println!("Answer: {}", solve(&in_string));
-
-    //let file = File::open("in.txt").unwrap();
-    //let mut input = BufReader::new(file);
-    //let mut in_string = String::new();
-    //input.read_to_string(&mut in_string).unwrap();
     println!("Answer: {}", solve2(&in_string));
 }
 
