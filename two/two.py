@@ -11,5 +11,17 @@ def solve():
         total += largest - smallest
     return total
 
+def solve2():
+    total = 0
+    for line in sys.stdin:
+        nums = list(map(int, line.strip().split()))
+        for i in range(len(nums)):
+            for j in range(len(nums)):
+                if i == j:
+                    continue
+                if nums[i] % nums[j] == 0:
+                    total += nums[i] // nums[j]
+    return total
+
 if __name__ == '__main__':
-    print(solve())
+    print(solve2())
